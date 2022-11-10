@@ -1,4 +1,7 @@
 results/
+jupyters/taming-transformers/
+jupyters/latent-diffusion/
+jupyters/weights/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
