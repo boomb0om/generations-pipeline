@@ -47,7 +47,7 @@ save_folder/
 
 **Апскейл**
 ---
-Для улучшения качества изображений используется функция `superres_folder(superres_func, folder_path: str, skip_grid: bool = True, filter_path = lambda x: True)`. Она рекурсиво проходится по папке и вызывает `superres_func` для каждого фото.
+Для улучшения качества изображений используется функция `superres_folder(superres_func, folder_path: str, skip_grid: bool = True, filter_path = lambda x: True)`. Она рекурсиво проходится по папке и вызывает `superres_func` для каждого фото, перезаписывая изображения. То есть по окончанию работы этой функции в папке будут лежать улучшенные изображения вместо обычных (по тем же путям).
 - `superres_func` - пользовательская функция, которая принимает изображение `PIL.Image.Image` и возвращает `PIL.Image.Image`. В ней вы должны реализовать логику работы с изображением.
 ```python
 def superres_func(pil_image: PIL.Image.Image) -> PIL.Image.Image:
